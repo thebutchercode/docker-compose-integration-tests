@@ -5,7 +5,7 @@ services:
     image: test
     build:
       context: .
-      dockerfile: /test/WebApp.IntegrationTests/Dockerfile
+      dockerfile: test/WebApp.IntegrationTests/Dockerfile
     depends_on:
       - webapi
     environment:
@@ -14,6 +14,6 @@ services:
     image: webapi
     build:
       context: .
-      dockerfile: /src/WebApp/Dockerfile
+      dockerfile: src/WebApp/Dockerfile
     ports:
       - 8080:80
